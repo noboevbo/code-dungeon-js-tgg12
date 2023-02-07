@@ -9,11 +9,11 @@ alert("Dein Text");
 ```
 
 ## Text in der Konsole ausgeben
-Neben der *Methode* **console.log** gibt es auch die Funktionen **console.warning** sowie **console.error**, die statt einem Log eine Warnung bzw. eine Fehlermeldung ausgeben. In den Entwicklertools kann man nach der Art der Meldung filter und so beispielsweise nur Fehler anzeigen lassen.
+Neben der *Methode* **console.log** gibt es auch die Funktionen **console.warn** sowie **console.error**, die statt einem Log eine Warnung bzw. eine Fehlermeldung ausgeben. In den Entwicklertools kann man nach der Art der Meldung filter und so beispielsweise nur Fehler anzeigen lassen.
 
 ```js
 console.log("Ein Logeintrag");
-console.warning("Eine Warnung").
+console.warn("Eine Warnung").
 console.error("Eine Fehlermeldung");
 ```
 

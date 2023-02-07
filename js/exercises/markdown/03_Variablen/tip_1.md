@@ -1,7 +1,7 @@
 # Wie man Variablen initialisiert
 Die Initialisierung von Variablen folgt immer dem selben Muster:
 
-![Aufbau einer Variableninitialisierung](Bilder/aufbau_variablen.jpg)
+![Aufbau einer Variableninitialisierung](/js/exercises/markdown/03_Variablen/Bilder/aufbau_variablen.jpg)
 
 1. Gibt die **Art der Deklaration** an. `let` steht für eine **Variable**, andere Arten lernst du in der nächsten Aufgabe kennen.
 2. Gibt den **Namen der Variable** an. Im Beispiel also *spielername*.

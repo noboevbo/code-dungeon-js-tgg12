@@ -23,7 +23,7 @@ document.getElementById("id").innerHTML = "Dein Text";
 ```
 
 Der Unterschied zwischen den Eigenschaften und Methoden (wie `console.log`) wird in späteren Aufgaben genauer thematisiert.
-# TODO: Zusatzaufgabe console.warning und console.error
+# TODO: Zusatzaufgabe console.warn und console.error
 
 # TODO: Arbeitsblatt
 - Unterschied syntax Methode und Zuweisung

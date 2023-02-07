@@ -3,7 +3,7 @@ Parameter einer Funktion sind Werte, die man beim Aufruf der Funktion übergibt 
 
 Aus der letzten Aufgabe sollte der grundlegende Aufbau von Funktionen bereits bekannt sein:
 
-![Aufbau einer Variableninitialisierung](Bilder/aufbau_funktion.png)
+![Aufbau einer Variableninitialisierung](/js/exercises/markdown/07_Funktionen_und_Rueckgabewerte/Bilder/aufbau_funktion.png)
 
 In diesem Beispiel hat die Funktion `meinFunktionsname` **zwei Parameter** mit den Namen `parameter1` und `parameter2`. Die Parameter werden durch **Kommas getrennt**. Diese Namen werden wie Variablen im Anweisungsblock der Funktion verwendet. Dort werden die Werte diese beiden Parameter addiert und anschließend von der Funktion zurückgegeben.
 

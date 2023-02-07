@@ -2,7 +2,7 @@
 
 Um zu Verstehen, wie eine Variable deklariert und initialisiert wird, hilft es sich noch einmal den Aufbau einer Deklaration und Initialisierung anzusehen:
 
-![Aufbau einer Variableninitialisierung](Bilder/aufbau_variablen.jpg)
+![Aufbau einer Variableninitialisierung](/js/exercises/markdown/03_Variablen/Bilder/aufbau_variablen.jpg)
 
 1. Gibt die **Art der Deklaration** an. Dabei steht `let` für eine **Variable**.
 2. Gibt den **Namen der Variable** an. 

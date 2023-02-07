@@ -8,5 +8,5 @@ Fehlermeldungen in der Konsole können über die Methode `console.error` ausgege
 Zusammengesetzt sieht das dann so aus:
 
 ```js
-console.warning("Fehlermeldung in der Konsole");
+console.warn("Fehlermeldung in der Konsole");
 ```
