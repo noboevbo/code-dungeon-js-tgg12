@@ -1,6 +1,13 @@
 import {
-    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue} from '../exercise/validation_helper.js';
+    classHasCorrectStyleValue,
+    classCheckStyleSameValue,
+    cssPaddingNames,
+    hasCorrectStyleValue,
+    localVarExists,
+    getFailResultObj, localVarError, valueEquals, scriptIncludes
+} from '../exercise/validation_helper.js';
 import {Exercise} from '../exercise/exercise_base.js';
+import {localVarDoesNotExistMsg} from "../exercise/error_messages.js";
 
 let exerciseID = "05_Rechnen_mit_Variablen";
 
@@ -34,13 +41,34 @@ let tips = [
         contentIsMarkdown: true,
     },
 ]
-
+let fuellstand = 21;
 let validationFuncs = [
     function () {
-        
+        try { return localVarExists(fuellstand, "fuellstand"); } catch { return localVarError("fuellstand") }
     },
     function () {
-        return hasCorrectStyleValue("meine-ueberschrift", "color", "rgb(255, 0, 0)");
+        try { return localVarExists(verbrauch, "verbrauch"); } catch { return localVarError("verbrauch") }
+    },
+    function () {
+        try { return localVarExists(getanktLiter, "getanktLiter"); } catch { return localVarError("getanktLiter") }
+    },
+    function() {
+        return valueEquals(verbrauch, "verbrauch", 10)
+    },
+    function() {
+        return valueEquals(getanktLiter, "getanktLiter", 40)
+    },
+    function() {
+        return valueEquals(fuellstand, "fuellstand", 60)
+    },
+    function () {
+        try { return localVarExists(reichweite, "reichweite"); } catch { return localVarError("reichweite") }
+    },
+    function() {
+        return valueEquals(reichweite, "reichweite", 600)
+    },
+    function () {
+        return scriptIncludes(`console.log(reichweite);`);
     },
 ]
 

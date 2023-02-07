@@ -1,5 +1,11 @@
 import {
-    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue} from '../exercise/validation_helper.js';
+    classHasCorrectStyleValue,
+    classCheckStyleSameValue,
+    cssPaddingNames,
+    hasCorrectStyleValue,
+    getFailResultObj,
+    getSuccessResultObj, isType
+} from '../exercise/validation_helper.js';
 import {Exercise} from '../exercise/exercise_base.js';
 
 let exerciseID = "07_Funktionen_und_Rueckgabewerte";
@@ -37,11 +43,17 @@ let tips = [
 
 let validationFuncs = [
     function () {
-        
+        try {
+            let result = getName();
+            return isType(result, "Ergebnis von getName()", "string");
+        } catch (e) {
+            if (e instanceof Error) {
+                return getFailResultObj(`Die Funktion "getName" existiert nicht.`);
+            }
+            return getFailResultObj(e.message);
+        }
     },
-    function () {
-        return hasCorrectStyleValue("meine-ueberschrift", "color", "rgb(255, 0, 0)");
-    },
+    // TODO: CHeck logausgabe
 ]
 
 let exerciseBase = new Exercise(exerciseID, instructions, infos, tips, validationFuncs);

@@ -29,6 +29,9 @@ export function globalVarExists(globalVarName) {
     return getSuccessResultObj();
 }
 
+export function localVarError(varName) {
+    return getFailResultObj(localVarDoesNotExistMsg(varName));
+}
 export function localVarExists(variable, varName) {
     console.warn(window[varName]);
     if (typeof window[varName] !== "undefined") {

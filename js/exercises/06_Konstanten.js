@@ -1,5 +1,6 @@
 import {
-    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue} from '../exercise/validation_helper.js';
+    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue, isConst, valueEquals
+} from '../exercise/validation_helper.js';
 import {Exercise} from '../exercise/exercise_base.js';
 
 let exerciseID = "06_Konstanten";
@@ -32,11 +33,11 @@ let tips = [
 
 let validationFuncs = [
     function () {
-        
+        return isConst("lichtgeschwindigkeit");
     },
     function () {
-        return hasCorrectStyleValue("meine-ueberschrift", "color", "rgb(255, 0, 0)");
-    },
+        return valueEquals(lichtgeschwindigkeit, "lichtgeschwindigkeit",299792458)
+    }
 ]
 
 let exerciseBase = new Exercise(exerciseID, instructions, infos, tips, validationFuncs);
