@@ -1,5 +1,5 @@
 import {
-    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue} from '../exercise/validation_helper.js';
+    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue, scriptIncludes} from '../exercise/validation_helper.js';
 import {Exercise} from '../exercise/exercise_base.js';
 
 let exerciseID = "02Z_AlertErrorWarning";
@@ -37,10 +37,13 @@ let tips = [
 
 let validationFuncs = [
     function () {
-        
+        return scriptIncludes(`alert("ALAAAAARM")`, "Alarm mit dem Text 'ALAAAAARM'");
     },
     function () {
-        return hasCorrectStyleValue("meine-ueberschrift", "color", "rgb(255, 0, 0)");
+        return scriptIncludes(`console.warn("Warnung in der Konsole")`, "Warnung in der Konsole");
+    },
+    function () {
+        return scriptIncludes(`console.error("Fehlermeldung in der Konsole")`, "Fehlermeldung in der Konsole");
     },
 ]
 

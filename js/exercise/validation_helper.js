@@ -30,6 +30,7 @@ export function globalVarExists(globalVarName) {
 }
 
 export function localVarExists(variable, varName) {
+    console.warn(window[varName]);
     if (typeof window[varName] !== "undefined") {
         return getFailResultObj(isGlobalNotLocalMsg(varName));
     }
@@ -56,12 +57,15 @@ export function isNonEmptyString(variable, varName) {
     return getSuccessResultObj();
 }
 
-export function scriptIncludes(requiredText, scriptID="exercise-script") {
+export function scriptIncludes(requiredText, tip=null, scriptID="exercise-script") {
     let scriptEl = document.getElementById(scriptID);
     if (!scriptEl) {
         return getFailResultObj(elDoesNotExistMsg(scriptID));
     }
     if (!scriptEl.innerText.includes(requiredText)) {
+        if (tip) {
+            return getFailResultObj(`Dein Script enthält kein ${tip}!`);
+        }
         return getFailResultObj(`Dein Script enthält kein ${requiredText}!`);
     }
     return getSuccessResultObj();
