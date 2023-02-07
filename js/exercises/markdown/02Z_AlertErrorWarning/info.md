@@ -1,3 +1,4 @@
+# Ausgabearten für Entwickler
 ## Text in einem Dialogfenster (Popup) ausgeben
 Die *Methode* **alert** gibt Text in einem Dialogfenster (Popup) aus. Diese Form von Ausgabe sollte nur zu Testzwecken verwendet werden, da Popups sehr Benutzerunfreundlich sind. 
 

@@ -12,7 +12,6 @@ let instructions = {
 
 let infos = [
     {
-        title: "Ausrichtung ändern",
         markdown: `/js/exercises/markdown/${exerciseID}/info.md`,
         contentIsMarkdown: true,
     },
@@ -20,15 +19,18 @@ let infos = [
 
 let tips = [
     {
-        level: 0,
-        title: "Legende",
+        level: 1,
         markdown: `/js/exercises/markdown/${exerciseID}/tip_1.md`,
         contentIsMarkdown: true,
     },
     {
-        level: 1,
-        title: "Horizontal & vertikal verteilen",
+        level: 2,
         markdown: `/js/exercises/markdown/${exerciseID}/tip_2.md`,
+        contentIsMarkdown: true,
+    },
+    {
+        level: 2,
+        markdown: `/js/exercises/markdown/${exerciseID}/tip_3.md`,
         contentIsMarkdown: true,
     },
 ]

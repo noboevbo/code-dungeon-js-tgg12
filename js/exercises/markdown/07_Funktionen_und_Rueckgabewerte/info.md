@@ -4,7 +4,7 @@ Funktionen kann man sich als Codeblöcke mit Namen vorstellen. Über den vergebe
 ## Aufbau von Funktionen
 Der grundlegende Aufbau einer Funktion ist in folgender Grafik dargestellt:
 
-![Aufbau einer Variableninitialisierung](Bilder/aufbau_funktion.png)
+![Aufbau einer Variableninitialisierung](/js/exercises/markdown/07_Funktionen_und_Rueckgabewerte/Bilder/aufbau_funktion.png)
 
 1. Die **Art der Deklaration**. Man deklariert eine Funktion mit dem Schlüsselwort `function`.
 2. Der **eindeutige Name** der Funktion
