@@ -1,6 +1,13 @@
 import {
-    classHasCorrectStyleValue, classCheckStyleSameValue, cssPaddingNames, hasCorrectStyleValue} from '../exercise/validation_helper.js';
+    classHasCorrectStyleValue,
+    classCheckStyleSameValue,
+    cssPaddingNames,
+    hasCorrectStyleValue,
+    localVarExists,
+    getFailResultObj
+} from '../exercise/validation_helper.js';
 import {Exercise} from '../exercise/exercise_base.js';
+import {localVarDoesNotExistMsg} from "../exercise/error_messages.js";
 
 let exerciseID = "04_globale_vs_lokale_Variablen";
 
@@ -32,10 +39,11 @@ let tips = [
 
 let validationFuncs = [
     function () {
-        
-    },
-    function () {
-        return hasCorrectStyleValue("meine-ueberschrift", "color", "rgb(255, 0, 0)");
+        if (typeof vorname !== 'undefined') {
+            return localVarExists(vorname, "vorname");
+        } else {
+            return getFailResultObj(localVarDoesNotExistMsg("vorname"));
+        }
     },
 ]
 
