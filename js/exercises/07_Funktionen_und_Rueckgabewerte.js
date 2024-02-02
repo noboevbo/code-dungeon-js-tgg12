@@ -48,7 +48,7 @@ let validationFuncs = [
             return isType(result, "Ergebnis von getName()", "string");
         } catch (e) {
             if (e instanceof Error) {
-                return getFailResultObj(`Die Funktion "getName" existiert nicht.`);
+                return getFailResultObj(`Die Funktion "getName" existiert nicht`);
             }
             return getFailResultObj(e.message);
         }

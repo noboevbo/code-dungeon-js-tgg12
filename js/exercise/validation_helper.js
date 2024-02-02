@@ -171,11 +171,22 @@ export function navListContainsElements(el, listElId, navListItems) {
 }
 
 export function innerTextEquals(elID, innerText) {
-    let h1El = document.getElementById(elID);
-    if (!h1El) {
+    let el = document.getElementById(elID);
+    if (!el) {
         return getFailResultObj(elDoesNotExistMsg(elID));
     }
-    if (h1El.innerText !== innerText) {
+    if (el.innerText !== innerText) {
+        return getFailResultObj(elWrongInnerTextMsg(elID, innerText));
+    }
+    return getSuccessResultObj();
+}
+
+export function innerTextContains(elID, innerText) {
+    let el = document.getElementById(elID);
+    if (!el) {
+        return getFailResultObj(elDoesNotExistMsg(elID));
+    }
+    if (el.innerText.includes(innerText)) {
         return getFailResultObj(elWrongInnerTextMsg(elID, innerText));
     }
     return getSuccessResultObj();
